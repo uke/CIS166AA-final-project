@@ -94,7 +94,7 @@ var validate_birthday = function(){
 	msg.style.visibility = "visible";
 	
 	if ( ! /^[01]?\d\/\d{1,2}\/\d{4}$/.test(text) ){
-		msg.innerHTML = "Birthday format is invalid. use mm-dd-yyyy";
+		msg.innerHTML = "Birthday format is invalid. use mm/dd/yyyy";
 		return false;
 	}
 
@@ -107,6 +107,7 @@ var validate_birthday = function(){
 			return false;		
 		}
 		// rudimentary day validation, ignoring leap years & short months. Bad code monkey. 
+		// if I have time I'll do this properly
 		if ( day < 1 || day > 31 ) {
 			msg.innerHTML = "Day invalid. Use 1-31";
 			return false;		
