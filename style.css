@@ -51,7 +51,8 @@ color:#444;
 }
 
 a { text-decoration:none; }
-a:hover{ color:#6190AC; }
+a:link,a.visited { color:#90AC61; }
+a:hover{ color:#ACA261; }
 
 /* carousel */
 .carousel img { border:none; }
