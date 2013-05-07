@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Final Project - Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>   
+	<div id="everything">
+		<header id="pageHeader">
+			<h1 id="siteTitle">My Portfolio Site</h1>
+		</header>   
+		<nav id="topNav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="form.html">Form</a></li>
+				<li><a href="tutorial.html">Tutorial</a></li>
+			</ul>
+			<hr class="clear">
+		</nav>
+	<section id="content">
+		<header id="pageTitle">
+			<h2>Form Page</h2>
+		</header>
+		<article id="indexArticle">
+			<p>
+			Here we play around with form validation. Fill in your details to sign the guest book.
+			</p>
+			<h3>Guest Book</h3>
+			<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="get" name="regForm" id="regForm">
+				<fieldset id="your_contact_information" >
+					<legend>Your Personal Details</legend>
+					<p><label for="name_in">Name:</label><input type="text" name="name_in" value="" id="name_in">
+						<span id="name_msg" class="errorMessage" style="visibility:hidden">Name is required</span>
+					</p>
+					<p><label for="email_in">Email:</label><input type="text" name="email_in" value="" id="email_in">
+						<span id="email_msg" class="errorMessage" style="visibility:hidden">Name is required</span>
+					</p>
+					<p><label for="phone_in">Telephone:</label><input type="text" name="phone_in" value="" id="phone_in">
+						<span id="phone_msg" class="errorMessage" style="visibility:hidden">Name is required</span>
+					</p>
+					<p><label for="birthday_in">Birthday:</label><input type="text/submit/hidden/button" name="birthday_in" value="" id="birthday_in">
+						<span id="birthday_msg" class="errorMessage" style="visibility:hidden">Name is required</span>
+						</p>
+						<p><div id="errorSummary" style="visibility:hidden">this is the error summary.</div></p>
+					<p><input type="button" name="submit_button" value="Submit" id="submit_button"></p>
+				</fieldset>
+				</form>
+		</article>
+	</section>
+	<footer id="pageFooter">this is the footer</footer></div>
+<script src="libraries/jslib_event.js"></script>
+<script src="libraries/jslib_dom_ready.js"></script>
+<script src="script.js"></script>
+    </body>
+</html>

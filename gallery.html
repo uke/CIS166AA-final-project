@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Final Project - Gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>   
+	<div id="everything">
+		<header id="pageHeader">
+			<h1 id="siteTitle">My Portfolio Site</h1>
+		</header>   
+		<nav id="topNav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="form.html">Form</a></li>
+				<li><a href="tutorial.html">Tutorial</a></li>
+			</ul>
+			<hr class="clear">
+		</nav>
+	<section id="content">
+		<header id="pageTitle">
+			<h2>Gallery Page</h2>
+		</header>
+		<article id="indexArticle">
+			<h3>The Flying Thing</h3>
+			<p>
+				I'm working on building a radio-controlled tricopter.  I like flying things in general, but being a 
+				software guy I am fascinated by the programming challenges involved in stabilizing a fly-by-wire
+				machine.  So I thought I'd build a test bed that I can get my feet wet with.  Right now it's using
+				a third-party Flight Control Board, but once I get it flying I plan to yank that out and
+				plug in an Arduino with home-rolled software.  Hopefully I won't crash the thing through some
+				neighbor's roof in the process. 
+			</p>
+			<div id="myCarousel" class="carousel">
+				<a href="#"><img src="images/IMG_0996.JPG"  alt="IMG 0996"></a> 
+				<a href="#"><img src="images/IMG_0997.JPG"  alt="IMG 0997"></a> 
+				<a href="#"><img src="images/IMG_0998.JPG"  alt="IMG 0998"></a>
+				<a href="#"><img src="images/IMG_1024.JPG"  alt="IMG 1024"></a>
+				<a href="#"><img src="images/IMG_1026.JPG"  alt="IMG 1026"></a>
+				<a href="#"><img src="images/IMG_1027.JPG"  alt="IMG 1027"></a>	
+				<a href="#"><img src="images/IMG_1028.JPG"  alt="IMG 1028"></a>
+				<a href="#"><img src="images/IMG_1029.JPG"  alt="IMG 1029"></a>
+				<a href="#"><img src="images/IMG_1030.JPG"  alt="IMG 1030"></a>
+			</div>
+			<p>To control the animation, hold the SHIFT key and press:
+				<ul><li>Up Arrow to increase aspect ratio</li>
+					<li>Down Arrow to decrease aspect ratio</li>
+					<li>Right and Left Arrows to switch direction</li></ul>
+					Use the mouse to control the movement. Hit ESC to stop rotation.</p>
+		</article>
+	</section>
+	<footer id="pageFooter">this is the footer</footer></div>
+<!-- jslib javascript libraries used here -->
+<script src="libraries/jslib_css.js"></script>
+<script src="libraries/jslib_event.js"></script>
+<script src="libraries/jslib_event_mouse.js"></script>
+<script src="libraries/jslib_event_keyboard.js"></script>
+<!-- courself javascript -->
+<script src="libraries/carousel_library.js"></script>
+<script src="libraries/carousel.js"></script>
+
+<!-- app-specifc javascript -->
+<script src="script.js"></script>
+    </body>
+</html>

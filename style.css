@@ -1,0 +1,63 @@
+
+/* base 616BAC complimentary */
+
+body { font-family: Verdana, Arial, "MS Trebuchet", sans-serif; font-size: .8em; background-color:#101321; color:#858587;}
+
+h1 { color:#6190AC; font-size:3.5em; line-height:1em; margin:0 0 20px 5px;}
+h2 {color: #90AC61; font-size: 2em;}
+h3 { color:#ACA261; }
+footer {color: #7061AC; }
+
+#everything { width:70%; height: 75% auto; margin: 0 auto;margin-top:5em; border:solid 1px #39406D; padding:10px; background-color:#333;}
+.clear {clear:both; visibility: hidden; margin:-10;}
+
+
+
+/* nav bar */
+#topNav {width:100%; background-color:#616BAC;}
+#topNav ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+#topNav a
+{
+display:block;
+width:75px;
+}
+
+#topNav li
+{
+float:left; 
+}
+
+#topNav a:link,a:visited
+{
+color:#BBB;
+
+text-align:center;
+padding:6px;
+text-decoration:none;
+text-transform:uppercase;
+}
+#topNav a:hover,a:active
+{
+background-color:#ACA261;
+color:#444;
+}
+
+a { text-decoration:none; }
+a:hover{ color:#6190AC; }
+
+/* carousel */
+.carousel img { border:none; }
+#myCarousel { padding: 0; }
+
+/* forms */
+label { width:100px;float:left;}
+.errorMessage { color:#db4a4a; }
+#errorSummary { color:#db4a4a; border: 1px solid red; width:50%; padding:10px}
