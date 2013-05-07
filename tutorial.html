@@ -4,8 +4,18 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>Final Project - Tutorial</title>
         <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="libraries/syntaxhighlighter_3.0.83/styles/shCore.css">
+        <link rel="stylesheet" href="libraries/syntaxhighlighter_3.0.83/styles/shThemeDefault.css">
+        <link rel="stylesheet" href="libraries/syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        
+		<script src="libraries/syntaxhighlighter_3.0.83/scripts/shCore.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libraries/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js" type="text/javascript" charset="utf-8"></script>
+		
     </head>
     <body>   
+		<script type="text/javascript">
+		     SyntaxHighlighter.all()
+		</script>
 	<div id="everything">
 		<header id="pageHeader">
 			<h1 id="siteTitle">My Portfolio Site</h1>
@@ -19,21 +29,46 @@
 			</ul>
 			<hr class="clear">
 		</nav>
-	<section id="content">
-		<header id="pageTitle">
-			<h2>Tutorial Page</h2>
-		</header>
-		<article id="indexArticle">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-			 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-			sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+	<sectionn id="content">
+				<header id="pageTitle">
+					<h2>Tutorial Page</h2>
+				</header>
+				<p>Here we examine some amusing Javascript.</p>
+				<article id="tutorialArticle">
+					<h3>Functions as shortcuts</h3>
+					
+					<pre class="brush: js">
+						/* helper function for getting elements by Id */
+						var $ = function(Id) {
+								return document.getElementById(Id);
+							}
+					</pre>
+					
+					<p>I don't know exactly why I think this is so cool, especially since it's about the most simple
+					thing one can do with Javascript.  But I do.  It might be that I always thought that "$" was some kind of magic
+					symbol JQuery provided-- I didn't realize that Javascript also let me define "$" in a way that is useful to me.
+					</p>
+					<p>So when I call something like <span class="highlight">$('foo')</span> that acts as a shortcut for the long-winded document.getElementById()
+						method, it just gives me code monkey warm fuzzies all over the place.  I know, I need to get out more.</p>
+						<p>But I digress.  The way it works is you define a function that wraps some functionality, using "$" as the
+							function name, instead of something more verbose:</p>
+							<pre class="brush: js">
+								var $ = function() {
+										// do something useful...
+										return "baz!";
+									}
+									
+									/*  call our useful function... */
+									var foo = $();
+									alert(foo); // displays "baz!"
+							</pre>
+							<p>And that's it.  to use this shortcut, just call the <span class="highlight">$()</span> function and soak up the 
+								concise goodness.</p>
+				<h3>Everything is an object</h3>
 		</article>
 	</section>
 	<footer id="pageFooter">this is the footer</footer></div>
-<script src="script.js"></script>
+<script src="script.js"  type="text/javascript"></script>
+
     </body>
 </html>

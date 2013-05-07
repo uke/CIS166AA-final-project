@@ -1,3 +1,5 @@
+/* CIS166AA 43172 Robert Bartlett 2013-05-07 Final Project */
+
 /* helper function for getting elements by Id */
 var $ = function(Id) {
 		return document.getElementById(Id);
