@@ -4,6 +4,9 @@ var $ = function(Id) {
 	}
 /*********************************************************
 * field validators
+
+* lots of validation logic lifted from Javascript 
+* textbook, with slight rearrangement.
 *********************************************************/	
 /* validate the name field */	
 var validate_name = function() {
@@ -83,6 +86,35 @@ var validate_phone = function(){
 	msg.style.visibility = "hidden"; // no errors, hide the message
     return true;
 }
+
+/* validate the birthday field */
+var validate_birthday = function(){
+	var text = $('birthday_in').value;
+	var msg = $('birthday_msg');
+	msg.style.visibility = "visible";
+	
+	if ( ! /^[01]?\d\/\d{1,2}\/\d{4}$/.test(text) ){
+		msg.innerHTML = "Birthday format is invalid. use mm-dd-yyyy";
+		return false;
+	}
+
+	    var dateParts = text.split("/");
+	    var month = parseInt(dateParts[0]);
+		var day = parseInt(dateParts[1]);
+	    var year = parseInt(dateParts[2]);
+	    if ( month < 1 || month > 12 ) {
+			msg.innerHTML = "Month invalid. Use 1-12";
+			return false;		
+		}
+		// rudimentary day validation, ignoring leap years & short months. Bad code monkey. 
+		if ( day < 1 || day > 31 ) {
+			msg.innerHTML = "Day invalid. Use 1-31";
+			return false;		
+		}
+	
+	msg.style.visibility = "hidden"; // no errors, hide the message	
+	return true;
+}
 /*********************************************************
 * Misc functions
 *********************************************************/
@@ -95,7 +127,7 @@ var validate = function() {
 		ok = validate_name() ? ok : false;
 		ok = validate_email() ? ok : false; 
 		ok = validate_phone() ? ok : false;
-		
+		ok = validate_birthday() ? ok : false;
 		return ok;
 	}
 
